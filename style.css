@@ -1,0 +1,75 @@
+/* General Layout Fix */
+body {
+    padding-top: 56px; /* Navbar height */
+    scroll-behavior: smooth;
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: #000;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url('/images/ofspace-llc-DKGv0wqKaL4-unsplash.jpg') center/cover no-repeat;
+
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .hero h1, .hero p {
+    animation: slideUp 1.5s ease-out;
+  }
+
+
+  /* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+  
+  body.dark-mode .navbar,
+  body.dark-mode footer {
+    background-color: #1f1f1f;
+  }
+  
+  body.dark-mode .card {
+    background-color: #2a2a2a;
+    color: #fff;
+  }
+  
+  body.dark-mode .form-control,
+  body.dark-mode .form-label {
+    background-color: #2a2a2a;
+    color: #fff;
+    border-color: #444;
+  }
+  
+  body.dark-mode .btn-outline-light {
+    border-color: #ddd;
+  }
+  
+  body.dark-mode .bg-light {
+    background-color: #1c1c1c !important;
+  }
+
+  textarea{
+    resize: none;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
