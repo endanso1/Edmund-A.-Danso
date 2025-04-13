@@ -55,6 +55,7 @@ body.dark-mode {
     resize: none;
   }
   
+  
   /* Animations */
   @keyframes fadeIn {
     0% { opacity: 0; }
