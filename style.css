@@ -10,7 +10,7 @@ body {
     background-color: #000;
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-            url('/images/ofspace-llc-DKGv0wqKaL4-unsplash.jpg') center/cover no-repeat;
+            url('/images/profile-pic.png') center/cover no-repeat;
 
     animation: fadeIn 2s ease-in-out;
   }
