@@ -1,214 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="icon" href="/images/person-circle.svg" type="image/png">
-  <title>Edmund A. Danso | Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/images/person-circle.svg" type="image/png" />
+    <title>Edmund A. Danso | Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
 
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="/style.css" />
-</head>
-<body>
-
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Edmund A. Danso</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Edmund A. Danso</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <button id="darkModeToggle" class="btn btn-outline-light ms-3">
+          🌙
+        </button>
+        <button
+          class="btn btn-outline-light ms-3"
+          data-bs-toggle="modal"
+          data-bs-target="#resumeModal"
+        >
+          📄 Resume
+        </button>
       </div>
-      <button id="darkModeToggle" class="btn btn-outline-light ms-3">🌙</button>
-      <button class="btn btn-outline-light ms-3" data-bs-toggle="modal" data-bs-target="#resumeModal">📄 Resume</button>
+    </nav>
 
+    <!-- Hero Section -->
+    <header class="hero d-flex align-items-center text-white text-center">
+      <div class="container">
+        <h1 class="display-4">Hi, I'm Edmund A. Danso</h1>
+        <p class="lead">Web Developer | UI/UX Designer | Freelancer</p>
+      </div>
+    </header>
 
-    </div>
-  </nav>
+    <!-- About Section -->
+    <section id="about" class="py-5" data-aos="fade-up">
+      <div class="container text-center">
+        <h2 class="mb-4">About Me</h2>
+        <p class="lead">
+          I'm Edmund A. Danso, a passionate web developer and UI/UX designer
+          dedicated to crafting intuitive and engaging digital experiences. With
+          a strong foundation in front-end technologies and a keen eye for
+          design, I specialize in building responsive websites and user
+          interfaces that not only look great but also provide seamless user
+          interactions.​ Over the years, I've collaborated with a diverse range
+          of clients, from startups to established businesses, delivering
+          customized solutions that align with their unique goals. My approach
+          combines technical proficiency with creative problem-solving, ensuring
+          each project is both functional and visually compelling.​Key
+          Skills:Proficient in HTML, CSS, JavaScript, and modern frameworks like
+          React and Vue.js.​Experienced in using design tools such as Figma and
+          Adobe XD for creating wireframes and prototypes.​Strong understanding
+          of responsive design principles and accessibility standards.​Ability
+          to translate complex requirements into user-friendly designs.​ As a
+          freelancer, I value clear communication and timely delivery. I'm
+          always eager to take on new challenges and help clients bring their
+          digital visions to life.
+        </p>
+      </div>
+    </section>
 
-  <!-- Hero Section -->
-  <header class="hero d-flex align-items-center text-white text-center">
-    <div class="container">
-      <h1 class="display-4">Hi, I'm Edmund A. Danso</h1>
-      <p class="lead">Web Developer | UI/UX Designer | Freelancer</p>
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <section id="about" class="py-5" data-aos="fade-up">
-    <div class="container text-center">
-      <h2 class="mb-4">About Me</h2>
-      <p class="lead">I'm Edmund A. Danso, a passionate web developer and UI/UX designer dedicated to crafting intuitive and engaging digital experiences. With a strong foundation in front-end technologies and a keen eye for design, I specialize in building responsive websites and user interfaces that not only look great but also provide seamless user interactions.​ Over the years, I've collaborated with a diverse range of clients, from startups to established businesses, delivering customized solutions that align with their unique goals. My approach combines technical proficiency with creative problem-solving, ensuring each project is both functional and visually compelling.​Key Skills:Proficient in HTML, CSS, JavaScript, and modern frameworks like React and Vue.js.​Experienced in using design tools such as Figma and Adobe XD for creating wireframes and prototypes.​Strong understanding of responsive design principles and accessibility standards.​Ability to translate complex requirements into user-friendly designs.​ As a freelancer, I value clear communication and timely delivery. I'm always eager to take on new challenges and help clients bring their digital visions to life.</p>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="py-5 bg-light" data-aos="fade-up">
-    <div class="container">
-      <h2 class="text-center mb-4">Projects</h2>
-      <div class="row g-4">
-        <!-- Project Card1 -->
-        <div class="col-md-4" data-aos="zoom-in">
-          <div class="card h-100 shadow-sm">
-            <img src="images/hopeGhana.png" class="card-img-top" alt="Project 1">
-            <div class="card-body">
-              <h5 class="card-title">Project Title</h5>
-              <p class="card-text">A platform which is committed to transforming the lives of children across Ghana. By connecting sponsors, resources, and communities, we aim to break the cycle of poverty and create a brighter future for the next generation.</p>
-              <a href="https://ed-support-ghana.netlify.app/" class="btn btn-primary" target="_blank">View Project</a>
+    <!-- Projects Section -->
+    <section id="projects" class="py-5 bg-light" data-aos="fade-up">
+      <div class="container">
+        <h2 class="text-center mb-4">Projects</h2>
+        <div class="row g-4">
+          <!-- Project Card1 -->
+          <div class="col-md-4" data-aos="zoom-in">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="images/hopeGhana.png"
+                class="card-img-top"
+                alt="Project 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Hope Ghana</h5>
+                <p class="card-text">
+                  A platform which is committed to transforming the lives of
+                  children across Ghana. By connecting sponsors, resources, and
+                  communities, we aim to break the cycle of poverty and create a
+                  brighter future for the next generation.
+                </p>
+                <a
+                  href="https://ed-support-ghana.netlify.app/"
+                  class="btn btn-primary"
+                  target="_blank"
+                  >View Project</a
+                >
+              </div>
             </div>
           </div>
-        </div>
-         <!-- Project Card2 -->
-        <div class="col-md-4" data-aos="zoom-in">
-          <div class="card h-100 shadow-sm">
-            <img src="images/edWeather.png" class="card-img-top" alt="Project 1">
-            <div class="card-body">
-              <h5 class="card-title">Project Title</h5>
-              <p class="card-text">A weather app that's gives you the current Weather condition of any city in the world.</p>
-              <a href="https://edweather.netlify.app/" class="btn btn-primary" target="_blank">View Project</a>
+          <!-- Project Card2 -->
+          <div class="col-md-4" data-aos="zoom-in">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="images/edWeather.png"
+                class="card-img-top"
+                alt="Project 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Weather Application</h5>
+                <p class="card-text">
+                  A weather app that's gives you the current Weather condition
+                  of any city in the world.
+                </p>
+                <a
+                  href="https://edweather.netlify.app/"
+                  class="btn btn-primary"
+                  target="_blank"
+                  >View Project</a
+                >
+              </div>
             </div>
           </div>
-        </div>
-         <!-- Project Card3 -->
-        <div class="col-md-4" data-aos="zoom-in">
-          <div class="card h-100 shadow-sm">
-            <img src="images/hopeGhana.png" class="card-img-top" alt="Project 1">
-            <div class="card-body">
-              <h5 class="card-title">Project Title</h5>
-              <p class="card-text">A platform which is committed to transforming the lives of children across Ghana. By connecting sponsors, resources, and communities, we aim to break the cycle of poverty and create a brighter future for the next generation.</p>
-              <a href="https://ed-support-ghana.netlify.app/" class="btn btn-primary" target="_blank">View Project</a>
+          <!-- Project Card3 -->
+          <div class="col-md-4" data-aos="zoom-in">
+            <div class="card h-100 shadow-sm">
+              <img
+                src="images/elearning.png"
+                class="card-img-top"
+                alt="Project 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">E-Learning Platform</h5>
+                <p class="card-text">
+                  A platform which is committed to transforming the lives of
+                  children across Ghana. By connecting sponsors, resources, and
+                  communities, we aim to break the cycle of poverty and create a
+                  brighter future for the next generation.
+                </p>
+                <a
+                  href="https://ed-support-ghana.netlify.app/"
+                  class="btn btn-primary"
+                  target="_blank"
+                  >View Project</a
+                >
+              </div>
             </div>
           </div>
+          <!-- More projects can go here -->
         </div>
-        <!-- More projects can go here -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5" data-aos="fade-up">
+      <div class="container">
+        <h2 class="text-center mb-4">Contact</h2>
+        <form
+          action="https://formsubmit.co/endanso1@gmail.com"
+          method="POST"
+          class="mx-auto"
+          style="max-width: 600px"
+        >
+          <!-- Redirect to thank-you page -->
+          <input
+            type="hidden"
+            name="_next"
+            value="https://edmunddanso.netlify.app//thank-you.html"
+          />
+
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="Your Name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea
+              class="form-control"
+              id="message"
+              name="message"
+              rows="8"
+              placeholder="Your message..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+
+        <!-- 📞 Additional Contact Options -->
+        <div class="text-center mt-4">
+          <h5 class="fw-bold mb-3">Other Ways to Reach Me</h5>
+
+          <!-- Phone Call -->
+          <p>
+            <i class="bi bi-telephone-fill text-primary me-2"></i>
+            <a href="tel:+233244923528" class="text-decoration-none"
+              >+233 244923528</a
+            >
+          </p>
+
+          <!-- WhatsApp -->
+          <p>
+            <i class="bi bi-whatsapp text-success me-2"></i>
+            <a
+              href="https://wa.me/233244923528"
+              target="_blank"
+              class="text-decoration-none"
+            >
+              Chat on WhatsApp
+            </a>
+          </p>
+
+          <!-- SMS -->
+          <p>
+            <i class="bi bi-chat-dots-fill text-info me-2"></i>
+            <a href="sms:+233542345678" class="text-decoration-none"
+              >Send a Text Message</a
+            >
+          </p>
+        </div>
+
+        <!-- 🌍 Social Media & Location -->
+        <div class="text-center mt-5">
+          <h5 class="fw-bold mb-3">Connect With Me</h5>
+
+          <!-- Social Icons -->
+          <div class="d-flex justify-content-center gap-4 mb-3">
+            <a
+              href="https://web.facebook.com/endanso"
+              target="_blank"
+              class="text-primary fs-4"
+            >
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a
+              href="https://twitter.com/yourusername"
+              target="_blank"
+              class="text-info fs-4"
+            >
+              <i class="bi bi-twitter"></i>
+            </a>
+            <a
+              href="https://linkedin.com/in/yourusername"
+              target="_blank"
+              class="text-primary fs-4"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              class="text-dark fs-4"
+            >
+              <i class="bi bi-github"></i>
+            </a>
+          </div>
+
+          <!-- Google Maps Location -->
+          <p>
+            <i class="bi bi-geo-alt-fill text-danger me-2"></i>
+            <a
+              href="https://www.google.com/maps?q=Accra+Ghana"
+              target="_blank"
+              class="text-decoration-none"
+            >
+              Accra, Ghana
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Resume Modal -->
+    <div
+      class="modal fade"
+      id="resumeModal"
+      tabindex="-1"
+      aria-labelledby="resumeModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="resumeModalLabel">My Resume</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <iframe
+              src="resume.pdf"
+              width="100%"
+              height="500px"
+              style="border: none"
+            ></iframe>
+            <a href="resume.pdf" class="btn btn-primary mt-3" download
+              >Download PDF</a
+            >
+          </div>
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-5" data-aos="fade-up">
-    <div class="container">
-      <h2 class="text-center mb-4">Contact</h2>
-      <form action="https://formsubmit.co/endanso1@gmail.com" method="POST" class="mx-auto" style="max-width: 600px;">
-        <!-- Redirect to thank-you page -->
-        <input type="hidden" name="_next" value="https://edmunddanso.netlify.app//thank-you.html">
-      
-        <div class="mb-3">
-          <label for="name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
-        </div>
-        <div class="mb-3">
-          <label for="message" class="form-label">Message</label>
-          <textarea class="form-control" id="message" name="message" rows="8" placeholder="Your message..." required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
-      </form>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+      <p class="mb-0">&copy; 2025 Edmund Appeadu Danso. All rights reserved.</p>
+    </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-    <!-- 📞 Additional Contact Options -->
-<div class="text-center mt-4">
-  <h5 class="fw-bold mb-3">Other Ways to Reach Me</h5>
-
-  <!-- Phone Call -->
-  <p>
-    <i class="bi bi-telephone-fill text-primary me-2"></i>
-    <a href="tel:+233244923528" class="text-decoration-none">+233 244923528</a>
-  </p>
-
-  <!-- WhatsApp -->
-  <p>
-    <i class="bi bi-whatsapp text-success me-2"></i>
-    <a href="https://wa.me/233244923528" target="_blank" class="text-decoration-none">
-      Chat on WhatsApp
-    </a>
-  </p>
-
-  <!-- SMS -->
-  <p>
-    <i class="bi bi-chat-dots-fill text-info me-2"></i>
-    <a href="sms:+233542345678" class="text-decoration-none">Send a Text Message</a>
-  </p>
-</div>
-
-<!-- 🌍 Social Media & Location -->
-<div class="text-center mt-5">
-  <h5 class="fw-bold mb-3">Connect With Me</h5>
-
-  <!-- Social Icons -->
-  <div class="d-flex justify-content-center gap-4 mb-3">
-    <a href="https://web.facebook.com/endanso" target="_blank" class="text-primary fs-4">
-      <i class="bi bi-facebook"></i>
-    </a>
-    <a href="https://twitter.com/yourusername" target="_blank" class="text-info fs-4">
-      <i class="bi bi-twitter"></i>
-    </a>
-    <a href="https://linkedin.com/in/yourusername" target="_blank" class="text-primary fs-4">
-      <i class="bi bi-linkedin"></i>
-    </a>
-    <a href="https://github.com/yourusername" target="_blank" class="text-dark fs-4">
-      <i class="bi bi-github"></i>
-    </a>
-  </div>
-
-  <!-- Google Maps Location -->
-  <p>
-    <i class="bi bi-geo-alt-fill text-danger me-2"></i>
-    <a href="https://www.google.com/maps?q=Accra+Ghana" target="_blank" class="text-decoration-none">
-      Accra, Ghana
-    </a>
-  </p>
-</div>
-
-
-      
-    </div>
-  </section>
-  <!-- Resume Modal -->
-<div class="modal fade" id="resumeModal" tabindex="-1" aria-labelledby="resumeModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="resumeModalLabel">My Resume</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body text-center">
-        <iframe src="resume.pdf" width="100%" height="500px" style="border:none;"></iframe>
-        <a href="resume.pdf" class="btn btn-primary mt-3" download>Download PDF</a>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-  <!-- Footer -->
-  <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p class="mb-0">&copy; 2025 Edmund A. Danso. All rights reserved.</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  
-  <script>
+    <script>
       AOS.init({
-          duration: 1000,
-          once: true
-        });
+        duration: 1000,
+        once: true,
+      });
     </script>
-        <script src="/script.js"></script>
-  
-</body>
+    <script src="/script.js"></script>
+  </body>
 </html>

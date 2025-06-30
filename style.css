@@ -55,6 +55,19 @@ body.dark-mode {
     resize: none;
   }
   
+  .hero .container {
+  background: rgba(0, 0, 0, 0.5); /* Add this */
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+
+
   
   /* Animations */
   @keyframes fadeIn {
