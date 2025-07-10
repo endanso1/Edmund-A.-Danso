@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Football Quiz 2025/26</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .question {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #fefefe;
+      border-left: 5px solid #007BFF;
+    }
+    h3 {
+      margin-top: 0;
+    }
+    label {
+      display: block;
+      margin: 5px 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+    input[type="text"] {
+      padding: 8px;
+      width: 100%;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Football Laws of the Game 2025/26 - Quiz</h1>
+
+  <form id="quizForm" method="POST" action="https://formsubmit.co/endanso1@gmail.com">
+    <label for="nameInput"><strong>Enter Your Name:</strong></label>
+    <input type="text" id="nameInput" name="Name" required />
+
+    <div id="quizContainer"></div>
+
+    <input type="hidden" name="Score" id="quizScore" />
+    <input type="hidden" name="_next" value="https://edmunddanso.netlify.app/thank-you.html" />
+    <button type="submit">Submit Quiz</button>
+    <div id="result"></div>
+  </form>
+
+  <script>
+    const questions = [
+      { q: "What is the maximum time a goalkeeper may hold the ball?", a: "A", opts: ["A. 6 seconds", "B. 8 seconds", "C. 10 seconds", "D. Indefinitely"] },
+      { q: "What is awarded if a goalkeeper holds the ball too long?", a: "A", opts: ["A. Indirect Free Kick", "B. Penalty Kick", "C. Corner Kick", "D. Drop Ball"] },
+      { q: "Who may approach the referee after a major incident?", a: "C", opts: ["A. Any player", "B. Coach", "C. Captain only", "D. Team doctor"] },
+      { q: "How many permanent substitutions are allowed for concussion?", a: "B", opts: ["A. 2", "B. 1", "C. Unlimited", "D. None"] },
+      { q: "Which item is compulsory for a player?", a: "B", opts: ["A. Face mask", "B. Shinguards", "C. Necklace", "D. Sunglasses"] },
+      { q: "What shape must the football be?", a: "C", opts: ["A. Oval", "B. Elliptical", "C. Spherical", "D. Hexagonal"] },
+      { q: "Minimum number of players to continue?", a: "C", opts: ["A. 9", "B. 8", "C. 7", "D. 5"] },
+      { q: "Where is a corner kick taken from?", a: "B", opts: ["A. Penalty spot", "B. Corner arc", "C. Touchline", "D. Halfway line"] },
+      { q: "Distance for free kick wall?", a: "B", opts: ["A. 5 meters", "B. 9.15 meters", "C. 10 yards", "D. 11 meters"] },
+      { q: "What restarts when a ball crosses the goal line (no goal)?", a: "B", opts: ["A. Throw-in", "B. Corner or goal kick", "C. Penalty", "D. Drop ball"] },
+      { q: "A dropped ball is used when:", a: "A", opts: ["A. Play is stopped with no foul", "B. A red card is issued", "C. Penalty is missed", "D. Offside is called"] },
+      { q: "How long is each half in regular time?", a: "C", opts: ["A. 30 minutes", "B. 40 minutes", "C. 45 minutes", "D. 60 minutes"] },
+      { q: "Ball in play means:", a: "A", opts: ["A. Ball has not completely crossed lines", "B. Ball is inside penalty area", "C. Referee blows whistle", "D. Goal is scored"] },
+      { q: "Penalty kick is taken from:", a: "B", opts: ["A. 9m", "B. 11m", "C. 12m", "D. 13m"] },
+      { q: "Who decides the final outcome after a VAR review?", a: "C", opts: ["A. VAR", "B. Assistant referee", "C. Referee", "D. Coach"] },
+      { q: "VAR is NOT used for:", a: "B", opts: ["A. Goals", "B. Throw-ins", "C. Red cards", "D. Penalties"] },
+      { q: "A player wearing jewelry should:", a: "A", opts: ["A. Be asked to remove it", "B. Be allowed to play", "C. Be ignored", "D. Be sent off"] },
+      { q: "Temporary dismissals (sin bins) are mostly used in:", a: "A", opts: ["A. Grassroots football", "B. Premier League", "C. World Cup", "D. Champions League"] },
+      { q: "Goal dimensions: width and height?", a: "B", opts: ["A. 6.32m x 2.5m", "B. 7.32m x 2.44m", "C. 8m x 2.2m", "D. 7.5m x 2.5m"] },
+      { q: "Who can restart play after a dropped ball?", a: "B", opts: ["A. Any player", "B. One player only", "C. Two players", "D. Goalkeeper only"] },
+      { q: "Penalty for a serious foul play is:", a: "A", opts: ["A. Red card", "B. Yellow card", "C. Indirect kick", "D. Throw-in"] },
+      { q: "Which of the following is an indirect free kick offense?", a: "A", opts: ["A. Dangerous play", "B. Tripping", "C. Holding", "D. Handball"] },
+      { q: "Players should wear what color undergarments?", a: "B", opts: ["A. Any color", "B. Same color as main kit", "C. Blue", "D. Black"] },
+      { q: "VAR can correct decisions for:", a: "A", opts: ["A. Mistaken identity", "B. Throw-in errors", "C. Captain dissent", "D. Sin bins"] },
+      { q: "Referee signals VAR review by:", a: "B", opts: ["A. Whistling", "B. Drawing a rectangle", "C. Waving hands", "D. Raising red card"] },
+      { q: "The area between goal line and penalty mark is:", a: "B", opts: ["A. Touchline", "B. Penalty area", "C. Center circle", "D. Technical area"] },
+      { q: "Shinguards must be:", a: "A", opts: ["A. Fully covered by socks", "B. Optional", "C. Over socks", "D. Attached to boots"] },
+      { q: "If a player uses abusive language:", a: "A", opts: ["A. Red card", "B. Yellow card", "C. Verbal warning", "D. Substitution"] },
+      { q: "Match cannot begin without:", a: "A", opts: ["A. Referee", "B. Captain", "C. VAR", "D. Team doctor"] },
+      { q: "Ball is out of play when:", a: "A", opts: ["A. It fully crosses touchline", "B. It touches goalpost", "C. GK catches it", "D. Ref whistles"] },
+      { q: "Return substitutes are allowed in:", a: "A", opts: ["A. Youth matches", "B. World Cup", "C. FIFA U-20", "D. Premier League"] },
+      { q: "Only the captain may:", a: "A", opts: ["A. Communicate about disputes", "B. Argue decisions", "C. Overrule referee", "D. Sub referees"] },
+      { q: "Standard match ball pressure range:", a: "B", opts: ["A. 1.2 – 1.5 atm", "B. 0.6 – 1.1 atm", "C. 0.3 – 0.5 atm", "D. 1.0 – 1.8 atm"] },
+      { q: "Red card results in:", a: "A", opts: ["A. Permanent send-off", "B. 5 min suspension", "C. Temporary sin bin", "D. Team fine"] },
+      { q: "How many substitution opportunities (excluding halftime)?", a: "B", opts: ["A. 2", "B. 3", "C. 4", "D. Unlimited"] },
+      { q: "Opponents must stay ___ from a penalty kick.", a: "A", opts: ["A. Outside penalty area", "B. Behind goal line", "C. Next to GK", "D. On halfway line"] },
+      { q: "VAR introduced to handle:", a: "A", opts: ["A. Clear and obvious errors", "B. All referee calls", "C. Training", "D. Tactical advice"] },
+      { q: "Ball used in matches must have:", a: "A", opts: ["A. FIFA approval", "B. Club branding", "C. Sponsor name", "D. Size 3 rating"] },
+      { q: "The captain’s armband must be:", a: "A", opts: ["A. One color or approved design", "B. Multicolored", "C. Optional", "D. Same as socks"] },
+      { q: "How many assistant referees typically support the main referee?", a: "A", opts: ["A. 2", "B. 3", "C. 4", "D. 1"] },
+      { q: "What restarts when the ball touches the referee and creates a promising attack?", a: "B", opts: ["A. Throw-in", "B. Dropped ball", "C. Indirect FK", "D. Continue play"] },
+      { q: "When should a referee abandon the match?", a: "A", opts: ["A. Serious external interference", "B. Minor foul", "C. Player scores", "D. Offside confusion"] },
+      { q: "How is advantage signaled by referee?", a: "A", opts: ["A. Arm swing", "B. Whistle blow", "C. Both hands raised", "D. Turning around"] },
+      { q: "A throw-in must be taken with:", a: "A", opts: ["A. Both hands behind head", "B. One hand", "C. Leg kick", "D. Head only"] },
+      { q: "How many players must be on the field to legally start a match?", a: "B", opts: ["A. 14", "B. 22", "C. 20", "D. 18"] },
+      { q: "Can a goalkeeper change positions with a field player?", a: "A", opts: ["A. Yes, with referee approval", "B. No", "C. Only in 2nd half", "D. Only during injury"] },
+      { q: "What does DOGSO stand for?", a: "A", opts: ["A. Denying Obvious Goal-Scoring Opportunity", "B. Direct Offside Goal Scoring Option", "C. Defensive Organizer Game System", "D. Delay Of Game Starts Over"] },
+      { q: "What is the referee’s decision after a successful OFR?", a: "A", opts: ["A. Final", "B. Suggested", "C. Optional", "D. Reversible by captain"] },
+      { q: "GLT stands for:", a: "A", opts: ["A. Goal Line Technology", "B. General Line Training", "C. Goalkeeper Line Tactic", "D. Game-Level Tactics"] },
+      { q: "VAR decisions are communicated to fans via:", a: "B", opts: ["A. Referee gestures only", "B. Announcements (2025/26 rule)", "C. VAR team interviews", "D. Subtitles"] }
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('quizContainer');
+      questions.forEach((q, idx) => {
+        const qDiv = document.createElement('div');
+        qDiv.classList.add('question');
+        qDiv.innerHTML = `<h3>${idx + 1}. ${q.q}</h3>`;
+        q.opts.forEach(opt => {
+          qDiv.innerHTML += `<label><input type="radio" name="q${idx + 1}" value="${opt.charAt(0)}"> ${opt}</label>`;
+        });
+        container.appendChild(qDiv);
+      });
+
+      document.getElementById('quizForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        let score = 0;
+
+        questions.forEach((q, i) => {
+          const selected = document.querySelector(`input[name="q${i + 1}"]:checked`);
+          if (selected && selected.value === q.a) score++;
+        });
+
+        const name = document.getElementById('nameInput').value;
+        const total = questions.length;
+
+        document.getElementById('quizScore').value = `${name} scored ${score} out of ${total}`;
+        document.getElementById('result').textContent = `Thank you, ${name}. You scored ${score} out of ${total}.`;
+
+        // Submit after delay so user sees result
+        setTimeout(() => this.submit(), 1000);
+      });
+    });
+  </script>
+</body>
+</html>
